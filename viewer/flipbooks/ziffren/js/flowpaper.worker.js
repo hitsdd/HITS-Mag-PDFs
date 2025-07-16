@@ -4,10 +4,19 @@ self.addEventListener('message', function(e) {
     var url = e.data;
 
     BinaryFileUtils.getBinaryContent(url,function(error,binfile){
-        var compressed = typeof Uint8Array != "undefined"?new Uint8Array(binfile):binfile;
-        var jsonString = pako.inflate(compressed,{ to: 'string' });
-        if(url.indexOf('../') == 0){url = url.substr(3);}
-        self.postMessage({url:url,JSON:jsonString});
+        if(!error){
+            var compressed = typeof Uint8Array != "undefined"?new Uint8Array(binfile):binfile;
+            var htmlString = pako.inflate(compressed,{ to: 'string' });
+            if(url.indexOf('../') == 0){url = url.substr(3);}
+            self.postMessage({url:url,HTML:htmlString});
+        }else{
+            if(url.indexOf('../') == 0){url = url.substr(3);}
+            if(error.toString().indexOf('404')>-1){
+                self.postMessage({url:url,error:'404'});
+            }else{
+                self.postMessage({url:url,error:'500'});
+            }
+        }
     });
 }, false);
 
