@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: sans-serif;
-      background: #9bb8de;
+      background: #ffffff;
       margin: 0;
       padding: 2rem;
       display: flex;
@@ -16,27 +16,47 @@
     header a img {
       height: 40px;
     }
-    .viewer {
-      display: flex;
-      gap: 2rem;
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
       margin-top: 2rem;
-      align-items: flex-start;
-      flex: 1;
+      margin-bottom: 0.5rem;
     }
-    .preview-image {
-      flex: 2;
+    h3 {
+      text-align: center;
+      font-weight: normal;
+      color: #444;
+      margin-top: 0;
+      margin-bottom: 2rem;
     }
-    .preview-image img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .firm-list {
-      flex: 1;
+    .button-section {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
     }
-    .firm-list a {
+    .view-all-button {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .view-all-button:hover {
+      background: #444;
+    }
+    .firm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .firm-grid a {
       display: block;
       background: #fefefe;
       color: #111;
@@ -48,7 +68,7 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       transition: background 0.2s;
     }
-    .firm-list a:hover {
+    .firm-grid a:hover {
       background: #ececec;
     }
     footer {
@@ -57,6 +77,7 @@
       padding: 2rem;
       text-align: center;
       font-size: 0.9rem;
+      margin-top: auto;
     }
     .footer-link {
       display: inline-block;
@@ -71,40 +92,36 @@
 </head>
 <body>
   <header>
-    <a href="/"><img src="/logo/hits-logo-no-boxes.svg" alt="HITS Logo"></a>
+    <a href="/"><img src="/logo/hits-logo-no-boxes.svg" alt="HITS Logo" /></a>
   </header>
-  <div class="viewer">
-    <div class="preview-image">
-      <img src="/previews/1427-lawspec-2025-intro.jpg" alt="Intro Preview Image">
-    </div>
-    <div class="firm-list">
-      <a href="/pdfs/1427-lawspec-2025-all-firms.pdf" target="_blank">View All Firms</a>
-      <a href="/pdfs/1427-lawspec-2025-ziffren.pdf" target="_blank">Ziffren Brittenham</a>
-      <a href="/pdfs/1427-lawspec-2025-boyarski.pdf" target="_blank">Boyarski Fritz LLP</a>
-      <a href="/pdfs/1427-lawspec-2025-davis-shapiro.pdf" target="_blank">Davis Shapiro Lewit Grabel</a>
-      <a href="/pdfs/1427-lawspec-2025-gang-tyre.pdf" target="_blank">Gang, Tyre, Ramer, Brown & Passman</a>
-      <a href="/pdfs/1427-lawspec-2025-granderson.pdf" target="_blank">Granderson Des Rochers LLP</a>
-      <a href="/pdfs/1427-lawspec-2025-greenberg-traurig.pdf" target="_blank">Greenberg Traurig</a>
-      <a href="/pdfs/1427-lawspec-2025-grubman.pdf" target="_blank">Grubman Shire Meiselas & Sacks, P.C.</a>
-      <a href="/pdfs/1427-lawspec-2025-jacobs.pdf" target="_blank">Jacobs Law Group, P.C.</a>
-      <a href="/pdfs/1427-lawspec-2025-lapolt.pdf" target="_blank">Lapolt Law, P.C.</a>
-      <a href="/pdfs/1427-lawspec-2025-myman.pdf" target="_blank">Myman Greenspan Fox Rosenberg Mobasser Younger & Light LLP</a>
-      <a href="/pdfs/1427-lawspec-2025-rossi.pdf" target="_blank">Rossi Baldivia Klein Fine & Spector</a>
-      <a href="/pdfs/1427-lawspec-2025-rmb.pdf" target="_blank">Rothenverg, Mohr, Binder</a>
-      <a href="/pdfs/1427-lawspec-2025-singh.pdf" target="_blank">Singh, Singh & Trauben, LLP</a>
-      <a href="/pdfs/1427-lawspec-2025-zia.pdf" target="_blank">The Zia Firm, PLLC</a>
-    </div>
+
+  <h1>The Lawyer Issue<br />2025</h1>
+  <h3>Law Firm Magazine Flipbooks:</h3>
+
+  <div class="button-section">
+    <a href="/pdfs/1427-lawspec-2025-all-firms.pdf" target="_blank" class="view-all-button">View All Firms</a>
   </div>
+
+  <div class="firm-grid">
+    <a href="/pdfs/1427-lawspec-2025-ziffren.pdf" target="_blank">Ziffren Brittenham</a>
+    <a href="/pdfs/1427-lawspec-2025-boyarski.pdf" target="_blank">Boyarski Fritz LLP</a>
+    <a href="/pdfs/1427-lawspec-2025-davis-shapiro.pdf" target="_blank">Davis Shapiro Lewit Grabel</a>
+    <a href="/pdfs/1427-lawspec-2025-gang-tyre.pdf" target="_blank">Gang, Tyre, Ramer, Brown & Passman</a>
+    <a href="/pdfs/1427-lawspec-2025-granderson.pdf" target="_blank">Granderson Des Rochers LLP</a>
+    <a href="/pdfs/1427-lawspec-2025-greenberg-traurig.pdf" target="_blank">Greenberg Traurig</a>
+    <a href="/pdfs/1427-lawspec-2025-grubman.pdf" target="_blank">Grubman Shire Meiselas & Sacks, P.C.</a>
+    <a href="/pdfs/1427-lawspec-2025-jacobs.pdf" target="_blank">Jacobs Law Group, P.C.</a>
+    <a href="/pdfs/1427-lawspec-2025-lapolt.pdf" target="_blank">Lapolt Law, P.C.</a>
+    <a href="/pdfs/1427-lawspec-2025-myman.pdf" target="_blank">Myman Greenspan Fox Rosenberg Mobasser Younger & Light LLP</a>
+    <a href="/pdfs/1427-lawspec-2025-rossi.pdf" target="_blank">Rossi Baldivia Klein Fine & Spector</a>
+    <a href="/pdfs/1427-lawspec-2025-rmb.pdf" target="_blank">Rothenberg, Mohr, Binder</a>
+    <a href="/pdfs/1427-lawspec-2025-singh.pdf" target="_blank">Singh, Singh & Trauben, LLP</a>
+    <a href="/pdfs/1427-lawspec-2025-zia.pdf" target="_blank">The Zia Firm, PLLC</a>
+  </div>
+
   <footer>
     <a class="footer-link" href="https://hitsdailydouble.com" target="_blank">Visit HITS Daily Double</a><br />
     © 2025 HITS Digital Ventures. All Rights Reserved.<br />
-    info@hitsmagazine.com
   </footer>
 </body>
 </html>
-
-let's change the background back. Let's lose the intro jpg, it's too messy. Let's add this copy as the intro:
-
-The Lawyer Issue 
-2025
-
