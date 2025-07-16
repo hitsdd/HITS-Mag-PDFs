@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>Law Special 2025 – Viewer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -15,63 +14,59 @@
       flex-direction: column;
       min-height: 100vh;
     }
-
     header {
       background: #ddd;
       padding: 2rem;
     }
-
     header a img {
       height: 40px;
-      max-width: 100%;
     }
 
-    h1 {
+    .issue-banner {
+      background: #eee;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
       text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      margin: 2rem auto 2rem;
+      max-width: 800px;
     }
-
-    .subhead {
-      font-weight: normal;
-      font-size: 1.2rem;
-      display: block;
-      margin-top: 0.25rem;
+    .issue-banner h1 {
+      font-size: 1.8rem;
+      margin: 0;
     }
 
     .firm-buttons {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
     }
-
     .firm-buttons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
       background: #fefefe;
       color: #111;
-      padding: 0.75rem;
       text-decoration: none;
-      border-radius: 6px;
+      padding: 0.75rem;
+      text-align: center;
       font-weight: bold;
+      border-radius: 6px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       transition: background 0.2s;
     }
-
     .firm-buttons a:hover {
       background: #ececec;
     }
 
-    .firm-buttons a:first-child {
+    .firm-buttons .primary {
+      grid-column: span 3;
+      font-size: 1rem;
       background: black;
       color: white;
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 1rem;
+      max-width: 300px;
+      margin: 0 auto 3rem; /* increased space below button */
+    }
+    .firm-buttons .primary:hover {
+      background: #444;
     }
 
     footer {
@@ -81,9 +76,7 @@
       text-align: center;
       font-size: 0.9rem;
       margin-top: auto;
-      line-height: 1.4;
     }
-
     .footer-link {
       display: inline-block;
       background: #111;
@@ -97,32 +90,36 @@
 </head>
 <body>
   <header>
-    <a href="/"><img src="/logo/hits-logo-red-clear.png" alt="HITS Logo" /></a>
+    <a href="/"><img src="../logo/hits-logo-red-clear.png" alt="HITS Logo" /></a>
   </header>
 
-  <h1>The Lawyer Issue 2025<br><span class="subhead">Flipbooks</span></h1>
+  <div class="issue-banner">
+    <h1>The Lawyer Issue 2025</h1>
+  </div>
 
   <div class="firm-buttons">
-    <a href="/pdfs/1427-lawspec-2025-all-firms.pdf" target="_blank">View All Firms</a>
-    <a href="/pdfs/1427-lawspec-2025-ziffren.pdf" target="_blank">Ziffren Brittenham</a>
-    <a href="/pdfs/1427-lawspec-2025-boyarski.pdf" target="_blank">Boyarski Fritz LLP</a>
-    <a href="/pdfs/1427-lawspec-2025-davis-shapiro.pdf" target="_blank">Davis Shapiro Lewit Grabel</a>
-    <a href="/pdfs/1427-lawspec-2025-gang-tyre.pdf" target="_blank">Gang, Tyre, Ramer, Brown & Passman</a>
-    <a href="/pdfs/1427-lawspec-2025-granderson.pdf" target="_blank">Granderson Des Rochers LLP</a>
-    <a href="/pdfs/1427-lawspec-2025-greenberg-traurig.pdf" target="_blank">Greenberg Traurig</a>
-    <a href="/pdfs/1427-lawspec-2025-grubman.pdf" target="_blank">Grubman Shire Meiselas & Sacks, P.C.</a>
-    <a href="/pdfs/1427-lawspec-2025-jacobs.pdf" target="_blank">Jacobs Law Group, P.C.</a>
-    <a href="/pdfs/1427-lawspec-2025-lapolt.pdf" target="_blank">Lapolt Law, P.C.</a>
-    <a href="/pdfs/1427-lawspec-2025-myman.pdf" target="_blank">Myman Greenspan Fox Rosenberg Mobasser Younger & Light LLP</a>
-    <a href="/pdfs/1427-lawspec-2025-rossi.pdf" target="_blank">Rossi Baldivia Klein Fine & Spector</a>
-    <a href="/pdfs/1427-lawspec-2025-rmb.pdf" target="_blank">Rothenberg, Mohr, Binder</a>
-    <a href="/pdfs/1427-lawspec-2025-singh.pdf" target="_blank">Singh, Singh & Trauben, LLP</a>
-    <a href="/pdfs/1427-lawspec-2025-zia.pdf" target="_blank">The Zia Firm, PLLC</a>
+    <a class="primary" href="/viewer/flipbooks/all-firms/index.html" target="_blank">View Full Flipbook</a>
+
+    <a href="/viewer/flipbooks/ziffren/index.html" target="_blank">Ziffren Brittenham</a>
+    <a href="/viewer/flipbooks/boyarski/index.html" target="_blank">Boyarski Fritz LLP</a>
+    <a href="/viewer/flipbooks/davis-shapiro/index.html" target="_blank">Davis Shapiro Lewit Grabel</a>
+    <a href="/viewer/flipbooks/gang-tyre/index.html" target="_blank">Gang, Tyre, Ramer, Brown & Passman</a>
+    <a href="/viewer/flipbooks/granderson/index.html" target="_blank">Granderson Des Rochers LLP</a>
+    <a href="/viewer/flipbooks/greenberg-traurig/index.html" target="_blank">Greenberg Traurig</a>
+    <a href="/viewer/flipbooks/grubman/index.html" target="_blank">Grubman Shire Meiselas & Sacks, P.C.</a>
+    <a href="/viewer/flipbooks/jacobs/index.html" target="_blank">Jacobs Law Group, P.C.</a>
+    <a href="/viewer/flipbooks/lapolt/index.html" target="_blank">Lapolt Law, P.C.</a>
+    <a href="/viewer/flipbooks/myman/index.html" target="_blank">Myman Greenspan Fox Rosenberg Mobasser Younger & Light LLP</a>
+    <a href="/viewer/flipbooks/rossi/index.html" target="_blank">Rossi Baldivia Klein Fine & Spector</a>
+    <a href="/viewer/flipbooks/rmb/index.html" target="_blank">Rothenberg, Mohr, Binder</a>
+    <a href="/viewer/flipbooks/singh/index.html" target="_blank">Singh, Singh & Trauben, LLP</a>
+    <a href="/viewer/flipbooks/zia/index.html" target="_blank">The Zia Firm, PLLC</a>
   </div>
 
   <footer>
     <a class="footer-link" href="https://hitsdailydouble.com" target="_blank">Visit HITS Daily Double</a><br />
     © 2025 HITS Digital Ventures. All Rights Reserved.<br />
+    info@hitsmagazine.com
   </footer>
 </body>
 </html>
