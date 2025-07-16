@@ -15,41 +15,58 @@
       flex-direction: column;
       min-height: 100vh;
     }
+
     header {
       background: #ddd;
       padding: 2rem;
     }
+
     header a img {
       height: 40px;
       max-width: 100%;
     }
+
     .feature-box {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #f5f5f5;
+      background: #f5f5f5; /* light gray 100 */
       padding: 2rem;
       margin: 3rem auto;
       border-radius: 12px;
       max-width: 960px;
       gap: 2rem;
       flex-wrap: wrap;
+      transition: background 0.3s ease;
     }
+
+    .feature-box:hover {
+      background: #eaeaea;
+    }
+
     .cover-wrapper img {
       max-width: 300px;
       width: 100%;
       border-radius: 8px;
       height: auto;
       display: block;
+      transition: transform 0.3s ease;
     }
+
     .feature-info {
       max-width: 400px;
       text-align: left;
     }
+
     .feature-info h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
     }
+
+    .feature-info h2 br {
+      display: none;
+    }
+
     .view-button {
       display: inline-block;
       padding: 0.75rem 1.5rem;
@@ -60,9 +77,11 @@
       font-weight: bold;
       transition: background 0.3s;
     }
+
     .view-button:hover {
       background: #444;
     }
+
     footer {
       background: #ddd;
       color: #222;
@@ -72,6 +91,7 @@
       margin-top: auto;
       line-height: 1.4;
     }
+
     .footer-link {
       display: inline-block;
       background: #111;
@@ -90,6 +110,9 @@
       .feature-info {
         text-align: center;
       }
+      .feature-info h2 br {
+        display: inline;
+      }
     }
   </style>
 </head>
@@ -105,7 +128,7 @@
       </a>
     </div>
     <div class="feature-info">
-      <h2>The Top Law Firms of the Music Biz 2025</h2>
+      <h2>The Top Law Firms<br>of the Music Biz 2025</h2>
       <a class="view-button" href="/viewer/law-special-2025.html">View Features Flipbooks</a>
     </div>
   </div>
