@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <title>Law Special 2025 – Viewer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: #ffffff;
       margin: 0;
       padding: 2rem;
@@ -45,19 +46,27 @@
       text-decoration: none;
       text-align: center;
       transition: background 0.3s;
+      display: inline-block;
     }
     .view-all-button:hover {
       background: #444;
+    }
+    .firm-grid-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
     }
     .firm-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1rem;
       max-width: 960px;
-      margin: 0 auto;
+      width: 100%;
     }
     .firm-grid a {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: #fefefe;
       color: #111;
       padding: 0.75rem;
@@ -67,6 +76,7 @@
       font-weight: bold;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       transition: background 0.2s;
+      min-height: 60px;
     }
     .firm-grid a:hover {
       background: #ececec;
@@ -102,26 +112,29 @@
     <a href="/pdfs/1427-lawspec-2025-all-firms.pdf" target="_blank" class="view-all-button">View All Firms</a>
   </div>
 
-  <div class="firm-grid">
-    <a href="/pdfs/1427-lawspec-2025-ziffren.pdf" target="_blank">Ziffren Brittenham</a>
-    <a href="/pdfs/1427-lawspec-2025-boyarski.pdf" target="_blank">Boyarski Fritz LLP</a>
-    <a href="/pdfs/1427-lawspec-2025-davis-shapiro.pdf" target="_blank">Davis Shapiro Lewit Grabel</a>
-    <a href="/pdfs/1427-lawspec-2025-gang-tyre.pdf" target="_blank">Gang, Tyre, Ramer, Brown & Passman</a>
-    <a href="/pdfs/1427-lawspec-2025-granderson.pdf" target="_blank">Granderson Des Rochers LLP</a>
-    <a href="/pdfs/1427-lawspec-2025-greenberg-traurig.pdf" target="_blank">Greenberg Traurig</a>
-    <a href="/pdfs/1427-lawspec-2025-grubman.pdf" target="_blank">Grubman Shire Meiselas & Sacks, P.C.</a>
-    <a href="/pdfs/1427-lawspec-2025-jacobs.pdf" target="_blank">Jacobs Law Group, P.C.</a>
-    <a href="/pdfs/1427-lawspec-2025-lapolt.pdf" target="_blank">Lapolt Law, P.C.</a>
-    <a href="/pdfs/1427-lawspec-2025-myman.pdf" target="_blank">Myman Greenspan Fox Rosenberg Mobasser Younger & Light LLP</a>
-    <a href="/pdfs/1427-lawspec-2025-rossi.pdf" target="_blank">Rossi Baldivia Klein Fine & Spector</a>
-    <a href="/pdfs/1427-lawspec-2025-rmb.pdf" target="_blank">Rothenberg, Mohr, Binder</a>
-    <a href="/pdfs/1427-lawspec-2025-singh.pdf" target="_blank">Singh, Singh & Trauben, LLP</a>
-    <a href="/pdfs/1427-lawspec-2025-zia.pdf" target="_blank">The Zia Firm, PLLC</a>
+  <div class="firm-grid-container">
+    <div class="firm-grid">
+      <a href="/pdfs/1427-lawspec-2025-ziffren.pdf" target="_blank">Ziffren Brittenham</a>
+      <a href="/pdfs/1427-lawspec-2025-boyarski.pdf" target="_blank">Boyarski Fritz LLP</a>
+      <a href="/pdfs/1427-lawspec-2025-davis-shapiro.pdf" target="_blank">Davis Shapiro Lewit Grabel</a>
+      <a href="/pdfs/1427-lawspec-2025-gang-tyre.pdf" target="_blank">Gang, Tyre, Ramer, Brown & Passman</a>
+      <a href="/pdfs/1427-lawspec-2025-granderson.pdf" target="_blank">Granderson Des Rochers LLP</a>
+      <a href="/pdfs/1427-lawspec-2025-greenberg-traurig.pdf" target="_blank">Greenberg Traurig</a>
+      <a href="/pdfs/1427-lawspec-2025-grubman.pdf" target="_blank">Grubman Shire Meiselas & Sacks, P.C.</a>
+      <a href="/pdfs/1427-lawspec-2025-jacobs.pdf" target="_blank">Jacobs Law Group, P.C.</a>
+      <a href="/pdfs/1427-lawspec-2025-lapolt.pdf" target="_blank">Lapolt Law, P.C.</a>
+      <a href="/pdfs/1427-lawspec-2025-myman.pdf" target="_blank">Myman Greenspan Fox Rosenberg Mobasser Younger & Light LLP</a>
+      <a href="/pdfs/1427-lawspec-2025-rossi.pdf" target="_blank">Rossi Baldivia Klein Fine & Spector</a>
+      <a href="/pdfs/1427-lawspec-2025-rmb.pdf" target="_blank">Rothenberg, Mohr, Binder</a>
+      <a href="/pdfs/1427-lawspec-2025-singh.pdf" target="_blank">Singh, Singh & Trauben, LLP</a>
+      <a href="/pdfs/1427-lawspec-2025-zia.pdf" target="_blank">The Zia Firm, PLLC</a>
+    </div>
   </div>
 
   <footer>
     <a class="footer-link" href="https://hitsdailydouble.com" target="_blank">Visit HITS Daily Double</a><br />
     © 2025 HITS Digital Ventures. All Rights Reserved.<br />
+    info@hitsmagazine.com
   </footer>
 </body>
 </html>
